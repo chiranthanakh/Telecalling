@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1A2562FC"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_toolbar"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:background="?selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/black"
+            android:layout_marginLeft="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Dashboard"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="60dp"
+        android:id="@+id/cv_layout"
+        android:backgroundTint="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Filter"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            app:tint="@color/icon_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:spinnerMode="dialog"
+            android:src="@drawable/filter"
+            android:visibility="visible" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ListView
+        android:id="@+id/lv_individual_indent_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="120dp"
+        android:layout_below="@id/filter"
+        android:nestedScrollingEnabled="true"
+        android:overScrollMode="never"
+        android:paddingBottom="90dp"
+        android:smoothScrollbar="true" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add"
+        android:textSize="16sp"
+        android:fontFamily="@font/proxima_family"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</RelativeLayout>
